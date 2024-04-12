@@ -21,7 +21,7 @@ casadi_dir = 'D:\path\to\casadi-windows-matlabR2016a-v3.5.5';
 ## Workflow
 1. navigate to `tro` folder, run live script `tro_main` to generate smoothed time-optimal raceline
 2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
-3. navigate to `sim` folder, run `racing_sim` to simulate racing scenario
+3. navigate to `sim` folder, run live script `racing_sim` to simulate racing scenario
 
    
 
