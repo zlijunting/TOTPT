@@ -11,8 +11,12 @@ TOTPT solves time-optimal raceline using NLP with direct collocation, and perfor
 [Download this repository](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at your local directory
 
 ### Check Dependencies
-*
-
+* Run `totpt_env_variables.m` to add `functions` and `params` folders to Matlab search path
+* Open `acados_env_variables_windows` in `nmpc`, fill your acados and casadi installation directory at the two lines
+```
+acados_dir = 'C:\path\to\acados';
+casadi_dir = 'D:\path\to\casadi-windows-matlabR2016a-v3.5.5';
+```
 
 ## Folders
 * `racetrack-database`: racelines and track widths of race tracks, available on (https://github.com/TUMFTM/racetrack-database)
@@ -30,10 +34,9 @@ TOTPT solves time-optimal raceline using NLP with direct collocation, and perfor
 
 
 ## Workflow
-1. run `add_path`
-2. run live script `tro_main` in `tro` folder to generate smoothed time-optimal raceline
-3. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC s-function and automatically copy it to `sim` folder
-5. run `racing_sim`
+1. navigate to `tro` folder, run live script `tro_main` to generate smoothed time-optimal raceline
+2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
+3. navigate to `sim` folder, run `racing_sim` to simulate racing scenario
 
 <!-- run `acados_env_variables_windows` before nmpc codegen --!>
 
