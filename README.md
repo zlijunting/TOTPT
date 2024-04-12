@@ -6,40 +6,30 @@ TOTPT solves time-optimal raceline using NLP with direct collocation, and perfor
 ### Check Prerequisites
 * Matlab and Simulink (tested on R2017a and R2022a with Win11)
 * Install [CasADi v3.5.5](https://web.casadi.org/get/)
+* Install [acados for Matlab](https://docs.acados.org/installation/index.html#windows-for-use-with-matlab)
 
-[Download this repository](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at your local directory
+[Download TOTPT](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at your local directory
 
+### Check Dependencies
+* Run `totpt_env_variables.m` to add `functions` and `params` folders to Matlab search path
+* Open `acados_env_variables_windows` in `nmpc` folder, fill your acados and casadi installation paths in the two lines
+```
+acados_dir = 'C:\path\to\acados';
+casadi_dir = 'D:\path\to\casadi-windows-matlabR2016a-v3.5.5';
+```
+
+## Workflow
+1. navigate to `tro` folder, run live script `tro_main` to generate smoothed time-optimal raceline
+2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
+3. navigate to `sim` folder, run live script `racing_sim` to simulate racing scenario
+
+   
 
 ## Folders
-* `acados`: complied [acados](https://github.com/acados/acados) package.
-* `racetrack-database`: racetrack database duplicated from [racetrack-database](https://github.com/TUMFTM/racetrack-database) repository
+* `racetrack-database`: racelines and track widths of race tracks, available on (https://github.com/TUMFTM/racetrack-database)
 * `functions`: helper functions for track processing
 * `params`: track smoothing parameters and vehicle parameters
 * `tro`: offline time-optimal trajectory optimization framework
 * `nmpc`: online NMPC trajectory tracking framework
 
-
-
-
-
-<!-- 這句看不見，一句話的註解 -->
-<!-- Introduction -->
-
-
-## Workflow
-1. run `add_path`
-2. run live script `tro_main` in `tro` folder to generate smoothed time-optimal raceline
-3. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC s-function and automatically copy it to `sim` folder
-5. run `racing_sim`
-
-<!-- run `acados_env_variables_windows` before nmpc codegen --!>
-
-<!--
-## Workflow
-### 1. Track Smoothing
-...
-### 2. Offline Trajectory Optimization
-...
-### 3. Online Tracjectory Tracking
---!>
 
