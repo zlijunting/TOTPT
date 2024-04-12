@@ -31,8 +31,8 @@
 
 
 
-acados_dir = 'C:\path\to\acados';
-casadi_dir = 'D:\path\to\casadi-windows-matlabR2016a-v3.5.5';
+acados_dir = 'A:\path\to\acados';
+casadi_dir = 'B:\path\to\casadi-windows-matlabR2016a-v3.5.5';
 
 matlab_interface_dir = fullfile(acados_dir, 'interfaces', 'acados_matlab_octave');
 mex_template_dir = fullfile(matlab_interface_dir, 'acados_template_mex');
