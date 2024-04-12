@@ -1,0 +1,22 @@
+# Folder #
+###################
+c_generated_code/
+build/
+slprj/
+figures/
+tracks_mintime/
+tracks_race/
+tracks_smooth/
+tro_sol/
+simout/
+
+# Suffix #
+###################
+*.mex*
+*.slxc
+*.png
+
+# Single File #
+###################
+acados_ocp_nlp.json
+

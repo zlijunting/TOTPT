@@ -1,0 +1,3 @@
+
+addpath('functions\')
+addpath('params\')
