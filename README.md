@@ -6,13 +6,16 @@ TOTPT solves time-optimal raceline using NLP with direct collocation, and perfor
 ### Check Prerequisites
 * Matlab and Simulink (tested on R2017a and R2022a with Win11)
 * Install [CasADi v3.5.5](https://web.casadi.org/get/)
+* Install [acados for Matlab](https://docs.acados.org/installation/index.html#windows-for-use-with-matlab)
 
 [Download this repository](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at your local directory
 
+### Check Dependencies
+*
+
 
 ## Folders
-* `acados`: complied [acados](https://github.com/acados/acados) package.
-* `racetrack-database`: racetrack database duplicated from [racetrack-database](https://github.com/TUMFTM/racetrack-database) repository
+* `racetrack-database`: racelines and track widths of race tracks, available on (https://github.com/TUMFTM/racetrack-database)
 * `functions`: helper functions for track processing
 * `params`: track smoothing parameters and vehicle parameters
 * `tro`: offline time-optimal trajectory optimization framework
