@@ -18,6 +18,13 @@ acados_dir = 'C:\path\to\acados';
 casadi_dir = 'D:\path\to\casadi-windows-matlabR2016a-v3.5.5';
 ```
 
+## Workflow
+1. navigate to `tro` folder, run live script `tro_main` to generate smoothed time-optimal raceline
+2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
+3. navigate to `sim` folder, run `racing_sim` to simulate racing scenario
+
+   
+
 ## Folders
 * `racetrack-database`: racelines and track widths of race tracks, available on (https://github.com/TUMFTM/racetrack-database)
 * `functions`: helper functions for track processing
@@ -25,27 +32,4 @@ casadi_dir = 'D:\path\to\casadi-windows-matlabR2016a-v3.5.5';
 * `tro`: offline time-optimal trajectory optimization framework
 * `nmpc`: online NMPC trajectory tracking framework
 
-
-
-
-
-<!-- 這句看不見，一句話的註解 -->
-<!-- Introduction -->
-
-
-## Workflow
-1. navigate to `tro` folder, run live script `tro_main` to generate smoothed time-optimal raceline
-2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
-3. navigate to `sim` folder, run `racing_sim` to simulate racing scenario
-
-<!-- run `acados_env_variables_windows` before nmpc codegen --!>
-
-<!--
-## Workflow
-### 1. Track Smoothing
-...
-### 2. Offline Trajectory Optimization
-...
-### 3. Online Tracjectory Tracking
---!>
 
