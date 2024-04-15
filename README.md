@@ -12,7 +12,7 @@ TOTPT solves time-optimal raceline using NLP with direct collocation, and perfor
 
 ### Check Dependencies
 * Run `totpt_env_variables.m` to add `functions` and `params` folders to Matlab search path
-* Open `acados_env_variables_windows` in `nmpc` folder, fill acados and casadi installation paths in the two lines
+* Open `acados_env_variables_windows.m` in `nmpc` folder, fill acados and casadi installation paths in the two lines
 ```
 acados_dir = 'A:\path\to\acados';
 casadi_dir = 'B:\path\to\casadi-windows-matlabR2016a-v3.5.5';
