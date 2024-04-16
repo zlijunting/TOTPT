@@ -5,7 +5,7 @@ TOTPT solves time-optimal raceline using NLP with direct collocation, and perfor
 ## Installation
 ### Check Prerequisites
 * Matlab and Simulink (tested on R2017a and R2022a with Win11)
-* Install [CasADi v3.5.5](https://github.com/casadi/casadi/releases/tag/3.5.5)
+* Install [CasADi](https://web.casadi.org/get/)
 * Install [acados for Matlab](https://docs.acados.org/installation/index.html#windows-for-use-with-matlab)
 
 [Download TOTPT](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at your local directory
