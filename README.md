@@ -1,6 +1,5 @@
 ## Time-Optimal Trajectory Planning and Tracking for Autonomous Vehicles
-TOTPT solves time-optimal raceline using NLP with direct collocation, and performs NMPC path tracking in Simulink.
-
+TOTPT solves time-optimal raceline using NLP with direct collocation approach, and performs NMPC path tracking within the racing scenario implemented in Simulink.
 
 ## Installation
 ### Check Prerequisites
@@ -23,7 +22,7 @@ casadi_dir = 'B:\path\to\casadi-3.6.5';
 2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
 3. navigate to `sim` folder, run live script `racing_sim` to simulate racing scenario
 
-![tracking](./imgs_doc/tro_results.png)
+![tracking](./imgs_doc/tro_results_doc.png)
    
 
 
