@@ -20,9 +20,10 @@ casadi_dir = 'B:\path\to\casadi-3.6.5';
 
 ## Workflow
 1. navigate to `tro` folder, run live script `tro_main` to generate smoothed time-optimal raceline (1~3 min, depend on problem size) 
-![tracking](./imgs_doc/tro_results.png)
 2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
 3. navigate to `sim` folder, run live script `racing_sim` to simulate racing scenario
+
+![tracking](./imgs_doc/tro_results.png)
    
 
 
