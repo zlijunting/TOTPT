@@ -60,7 +60,7 @@ x_s = [V_s beta_s gamma_s n_s xi_s omega_s omega_s omega_s omega_s]';
 
 % state limits
 omega_max = veh.V_max/veh.rw; 
-x_min = [    OPT_e; -pi/4; -pi/2; -4; -pi/4;     0;     0;     0;     0]./x_s;
+x_min = [    -1e-3; -pi/4; -pi/2; -4; -pi/4;     0;     0;     0;     0]./x_s;
 x_max = [veh.V_max;  pi/4;  pi/2;  4;  pi/4; omega_max; omega_max; omega_max; omega_max]./x_s;
 
 
@@ -208,10 +208,10 @@ fzr = fzrl + fzrr;
 
 
 % Tire longitudinal slips
-sxfl = (veh.rw*omega_fl-vxfl)/vxfl;
-sxfr = (veh.rw*omega_fr-vxfr)/vxfr;
-sxrl = (veh.rw*omega_rl-vxrl)/vxrl;
-sxrr = (veh.rw*omega_rr-vxrr)/vxrr;
+SXfl = (veh.rw*omega_fl-vxfl)/vxfl;
+SXfr = (veh.rw*omega_fr-vxfr)/vxfr;
+SXrl = (veh.rw*omega_rl-vxrl)/vxrl;
+SXrr = (veh.rw*omega_rr-vxrr)/vxrr;
 
 % Tire lateral slips
 syfl = vyfl/vxfl;
@@ -219,15 +219,15 @@ syfr = vyfr/vxfr;
 syrl = vyrl/vxrl;
 syrr = vyrr/vxrr;
 
-sfl = sqrt(sxfl^2+syfl^2);
-sfr = sqrt(sxfr^2+syfr^2);
-srl = sqrt(sxrl^2+syrl^2);
-srr = sqrt(sxrr^2+syrr^2);
+sfl = sqrt(SXfl^2+syfl^2);
+sfr = sqrt(SXfr^2+syfr^2);
+srl = sqrt(SXrl^2+syrl^2);
+srr = sqrt(SXrr^2+syrr^2);
 
-fxfl = (sxfl/sfl)*MF_Fx(veh,sfl,fzfl);
-fxfr = (sxfr/sfr)*MF_Fx(veh,sfr,fzfr);
-fxrl = (sxrl/srl)*MF_Fx(veh,srl,fzrl);
-fxrr = (sxrr/srr)*MF_Fx(veh,srr,fzrr);
+fxfl = (SXfl/sfl)*MF_Fx(veh,sfl,fzfl);
+fxfr = (SXfr/sfr)*MF_Fx(veh,sfr,fzfr);
+fxrl = (SXrl/srl)*MF_Fx(veh,srl,fzrl);
+fxrr = (SXrr/srr)*MF_Fx(veh,srr,fzrr);
 fxf = fxfl + fxfr;
 fxr = fxrl + fxrr;
 
@@ -298,7 +298,7 @@ dx = sf*xdot;
 %-Collect output variables
 y_aero = [f_drag; f_lift];
 y_tyre = [fxfl; fxfr; fxrl; fxrr; fyfl; fyfr; fyrl; fyrr; fzfl; fzfr; fzrl; fzrr];
-y_slip = [sxfl; sxfr; sxrl; sxrr; atan(syfl); atan(syfr); atan(syrl); atan(syrr)];
+y_slip = [SXfl; SXfr; SXrl; SXrr; atan(syfl); atan(syfr); atan(syrl); atan(syrr)];
 y_acc = [ax; ay];
 y_torque = [Tfl; Tfr; Trl; Trr];
 y_mu = [mufl; mufr; murl; murr];

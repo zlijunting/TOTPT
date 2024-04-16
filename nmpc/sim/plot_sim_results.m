@@ -25,7 +25,7 @@ set(groot,'defaultAxesYGrid','on')
 
 %% Plot States
 s_end = out.s_sim(end);
-figure('Units','pixels','Position',[10 50 1800 800])
+f1 = figure('Units','pixels','Position',[10 50 1800 800]);
 tiledlayout(2,2,'TileSpacing','compact','Padding','compact')
 
 nexttile
@@ -57,7 +57,7 @@ xlabel('s [m]')
 sgtitle('Vehicle States')
 
 %% Inputs and it's derivative
-figure('Units','pixels','Position',[10 50 1800 800])
+f2 = figure('Units','pixels','Position',[10 50 1800 800]);
 tiledlayout(2,2,'TileSpacing','compact','Padding','compact','TileIndexing','columnmajor')
 size_u = size(out.U_star);
 length_u = size_u(3);
@@ -101,7 +101,7 @@ sgtitle('Driving Inputs')
 
 [track_bnd_r, track_bnd_l] = calc_track_bnd([xr yr wr wl]);
 
-figure('Units','pixels','Position',[10 50 1800 800])
+f3 = figure('Units','pixels','Position',[10 50 1800 800]);
 tiledlayout(2,4,'TileSpacing','compact','Padding','compact')
 sgtitle('Path Tracking Performance')
 
@@ -112,7 +112,6 @@ plot(track_bnd_l(:,1),track_bnd_l(:,2),'-','Color', gray_rgb)
 sz = 4;
 scatter(out.X_sim,out.Y_sim,sz,out.Vx_sim*3.6), hold on
 
-% plot(xr,yr,'LineWidth',2.0,'Color', gray_rgb), hold on
 plot(xr(1:index_max),yr(1:index_max),'-','LineWidth',0.5,'Color', [0.4 0.4 0.4])
 
 xlabel('X [m]')
@@ -127,61 +126,41 @@ axis equal
 
 nexttile([1 2])
 plot(out.s,out.n), hold on
-ed_rms = rms(out.n);
-% yline(ed_rms,'LineWidth',1.5)
-ylim([min(out.n)-0.1 max(out.n)+0.1])
 xlabel('S [m]')
 ylabel('$n\;[\textrm{m}]$','Interpreter','latex','FontSize',15)
-% legend('Data','RMS')
-ylim([-0.2 0.2])
 xlim([0 s_end])
 
 nexttile([1 2])
 plot(out.s,(out.xi+out.beta_sim)*180/pi), hold on
-chi_rms = rms(out.xi+out.beta_sim)*180/pi;
-% yline(epsi_rms,'LineWidth',1.5)
-% ylim([-4 4])
-ylim([min(out.xi+out.beta_sim)*180/pi-0.5 max(out.xi+out.beta_sim)*180/pi+0.5])
 xlabel('S [m]')
 ylabel('$\chi \;[deg]$','Interpreter','latex','FontSize',15)
-% legend('Data','RMS')
 xlim([0 s_end])
 
-% figure
-% chi = out.beta_sim + out.xi;
-% plot(out.s_sim, chi), grid on, hold on
-% plot(out.s_sim, out.beta_sim)
-% plot(out.s_sim, out.xi)
-% legend('\chi','\beta','\xi')
 
 
 %% ggv diagram
 
-figure('Units','pixels')
+f4 = figure('Units','pixels');
 g = 9.81;
 Ax = out.ax_sim/g;
 Ay = out.ay_sim/g;
-downsample_n = 10;
-Ax = downsample(Ax, downsample_n);
-Ay = downsample(Ay, downsample_n);
+% downsample_n = 10;
+% Ax = downsample(Ax, downsample_n);
+% Ay = downsample(Ay, downsample_n);
 A = sqrt(Ax.^2+Ay.^2);
+Vx_contour = out.Vx_sim;
+% Vx_contour = downsample(out.Vx_sim, downsample_n);
 
-Vx_contour = downsample(out.Vx_sim, downsample_n);
-
-% scatter(Ay,Ax,[],A,'filled')
 scatter(Ay,Ax,[],Vx_contour)
 cb=colorbar;
-% cb.Title.String = "A [g]";
-% ylabel(cb,'$||\vec{\textbf{a}}|| \; [\rm{g}]$','Interpreter','latex','FontSize',15)
 ylabel(cb,'$V_x \; [\rm{m/s}]$','Interpreter','latex','FontSize',15)
-axis([-1 1 -1 1])
-% axis equal
+axis([-1.1 1.1 -1.1 1.1])
 xlabel('a_y [g]')
 ylabel('a_x [g]')
-
+title('g-g-v Diagram')
 
 %% Wheel Torques
-figure
+f5 = figure;
 plot(out.s_sim,out.inputs(:,1:4)), hold on
 xlabel('S [m]')
 ylabel('T [N-m]')
@@ -205,7 +184,7 @@ y_circ = r_circ*sin(theta_circ);
 xlabel_text = {'\mu_{yfl}','\mu_{yfr}','\mu_{yrl}','\mu_{yrr}'};
 ylabel_text = {'\mu_{xfl}','\mu_{xfr}','\mu_{xrl}','\mu_{xrr}'};
 
-figure
+f6 = figure;
 for i=1:4
     subplot(2,2,i)
     mu_x = Fx(:,i)./Fz(:,i);
