@@ -1,5 +1,5 @@
 ## Time-Optimal Trajectory Planning and Tracking for Autonomous Vehicles
-TOTPT solves time-optimal raceline using NLP with direct collocation approach, and performs high-performance NMPC path tracking in the racing scenario implemented in Simulink.
+TOTPT solves time-optimal raceline using NLP with direct collocation approach, and performs NMPC path tracking in the racing scenario implemented in Simulink.
 
 ## Installation
 ### Check Prerequisites
