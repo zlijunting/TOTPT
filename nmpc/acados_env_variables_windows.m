@@ -32,7 +32,6 @@
 
 
 acados_dir = 'D:\acados_complied\acados';
-% casadi_dir = 'C:\Users\Ting\Downloads\Compressed\casadi-windows-matlabR2016a-v3.5.5';
 casadi_dir = 'C:\Users\Ting\Downloads\Compressed\casadi-3.6.5-windows64-matlab2018b_2';
 
 

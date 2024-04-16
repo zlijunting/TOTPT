@@ -1,19 +1,3 @@
-% function index_onelap = calc_stop_flag(track)
-% %-Inputs
-% %-track: path waypoints, [x, y] (N*2)
-% %
-% %-Outputs
-% %-index_onelap: index of waypoints in the end of one lap.
-% 
-% p0 = track(1,1:2);
-% index_skip = 100;
-% p_search = track(1+index_skip:end,1:2);
-% dist = sqrt(sum((p_search-p0).^2,2));
-% [~, ind_min] = min(dist);
-% index_onelap = ind_min + index_skip;
-% 
-% end
-
 function index_onelap = calc_stop_flag(track)
 % CALC_STOP_FLAG Determines the index of the waypoint that signifies the end of one lap
 % Input:

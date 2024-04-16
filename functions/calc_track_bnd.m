@@ -1,20 +1,3 @@
-% function [track_bnd_r, track_bnd_l] = calc_track_bnd(track_data)
-% %-track_data, [x, y, wr, wl] (N*4)
-% %
-% %-Outputs
-% %-track_bnd_r: right boundary coordinates
-% %-track_bnd_r: left boundary coordinates
-% 
-% [phi, ~] = calc_head_curv_num(track_data(:,1:2));
-% 
-% nor_vec = [-sin(phi) cos(phi)];
-% 
-% track_bnd_r = track_data(:,1:2) - track_data(:,3).*nor_vec;
-% track_bnd_l = track_data(:,1:2) + track_data(:,4).*nor_vec;
-% 
-% 
-% end
-
 function [track_bnd_r, track_bnd_l] = calc_track_bnd(track_data)
 % CALC_TRACK_BND Calculates the right and left boundaries of a track
 % Input:

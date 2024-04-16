@@ -1,21 +1,3 @@
-% function [track_interp,s_interp] = calc_track_interp(track,ds_interp)
-% %-track_data: [x, y, wr, wl, ...], n*i;
-% %-ds_interp: step size for spline interoplation
-% %
-% %-Outputs
-% %-track_interp: interpolated track data for given ds
-% %-s_interp: query points for interpolation
-% 
-% [s, ~] = calc_length_xy(track(:,1:2));
-% s_end_interp = fix(s(end)/ds_interp)*ds_interp;
-% s_interp = (0:ds_interp:s_end_interp)';
-% 
-% track_pp = spline(s',track');
-% 
-% track_interp = fnval(track_pp,s_interp)';
-% 
-% end
-
 function [track_interp, s_interp] = calc_track_interp(track, ds_interp)
 % CALC_TRACK_INTERP Interpolates track data at specified intervals
 % Input:

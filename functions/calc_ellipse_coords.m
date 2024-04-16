@@ -1,18 +1,3 @@
-% function [x, y] = calc_ellipse_coords(x0, y0, a, b)
-% %-Inputs
-% %-x0, y0: %-ellipse centre coordinates 
-% %-a: horizontal radius
-% %-b: vertical radius
-% %
-% %-Outputs
-% %-x, y: %-ellipse coordinates
-% 
-% t = -pi:0.01:pi;
-% x = x0 + a*cos(t);
-% y = y0 + b*sin(t);
-% 
-% end
-
 function [x, y] = calc_ellipse_coords(x0, y0, a, b)
 % CALC_ELLIPSE_COORDS Generates the x and y coordinates of an ellipse
 % Input:
