@@ -23,7 +23,7 @@ casadi_dir = 'B:\path\to\casadi-3.6.5';
 2. navigate to `nmpc` folder, run `nmpc_gen` to generate NMPC mex function and automatically copy it to `sim` folder
 3. navigate to `sim` folder, run live script `racing_sim` to simulate racing scenario
 
-![tracking](./imgs_doc/tro_results.png)
+#![tracking](./imgs_doc/tro_results.png)
    
 
 
