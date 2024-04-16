@@ -11,9 +11,6 @@ T = 1.5; % time horizon length
 Ts = T/N;
 
 out_file = ['simout\' 'out_' track_name];
-preload_file = ['..\..\tro\tracks_preload\' 'preload_' track_name];
-
-load(preload_file)
 load(out_file)
 
 

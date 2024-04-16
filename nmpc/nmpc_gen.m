@@ -9,7 +9,7 @@ if isfile('c_generated_code\CMakeCache.txt')
     delete('c_generated_code\CMakeCache.txt')
 end
 acados_env_variables_windows
-check_acados_requirements()
+% check_acados_requirements()
 
 %% Parameters
 
