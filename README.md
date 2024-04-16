@@ -8,7 +8,7 @@ TOTPT solves time-optimal raceline using NLP with direct collocation, and perfor
 * Install [CasADi](https://web.casadi.org/get/)
 * Install [acados for Matlab](https://docs.acados.org/installation/index.html#windows-for-use-with-matlab)
 
-[Download TOTPT](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at your local directory
+[Download TOTPT](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at local directory
 
 ### Check Dependencies
 * Run `totpt_env_variables.m` to add subfolders to Matlab search path
