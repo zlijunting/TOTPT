@@ -15,6 +15,7 @@ simout/
 *.mex*
 *.slxc
 *.png
+*.r20*
 
 # Single File #
 ###################
