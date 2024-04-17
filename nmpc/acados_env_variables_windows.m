@@ -31,9 +31,8 @@
 
 
 
-acados_dir = 'D:\acados_complied\acados';
-casadi_dir = 'C:\Users\Ting\Downloads\Compressed\casadi-3.6.5-windows64-matlab2018b_2';
-
+acados_dir = 'A:\path\to\acados';
+casadi_dir = 'B:\path\to\acados\external\casadi-matlab';
 
 
 matlab_interface_dir = fullfile(acados_dir, 'interfaces', 'acados_matlab_octave');
