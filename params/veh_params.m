@@ -33,30 +33,16 @@ veh.kb = 0.65;
 
 %% Tire parameters
 
-% veh.Bx = 18.5782;
-% veh.Cx = 1.3383;
-% veh.d1x = 0.9472;
-% veh.d2x = 322.9126;
 veh.Bx = 18;
 veh.Cx = 1.3;
 veh.d1x = 0.95;
 veh.d2x = 320;
 
-
-% veh.By = 13.0979;
-% veh.Cy = 1.4467;
-% veh.d1y = 0.9393;
-% veh.d2y = 320.5750;
 veh.By = 13;
 veh.Cy = 1.5;
 veh.d1y = 0.95;
 veh.d2y = 320;
 
-
-
-
-% veh.mux = 0.95;
-% veh.muy = 0.95;
 veh.mux = 1.0;
 veh.muy = 1.0;
 
@@ -75,11 +61,6 @@ veh.Tb_s = 1000*4;
 veh.delta_s = pi/8;
 veh.omega_s = veh.V_s/veh.rw;
 
-% x_s_tro = [veh.V_s; veh.beta_s; veh.gamma_s; veh.ax_bar_s; veh.ay_bar_s;
-%     veh.s_s; veh.n_s; veh.xi_s; veh.Tt_s; veh.Tb_s; veh.delta_s];
-
-% veh.x_s_nmpc = [veh.V_s; veh.beta_s; veh.gamma_s; veh.ax_bar_s; veh.ay_bar_s;
-%     veh.s_s; veh.n_s; veh.xi_s; veh.Tt_s; veh.Tb_s; veh.delta_s];
 
 %% State an input limits
 % states
@@ -118,10 +99,6 @@ veh.Tt_dot_min = -1500*2;
 veh.Tt_dot_max =  1500*2;
 veh.Tb_dot_min = -1500*4;
 veh.Tb_dot_max =  1500*4;
-% veh.Tt_dot_min = -1000*2;
-% veh.Tt_dot_max =  1000*2;
-% veh.Tb_dot_min = -1000*4;
-% veh.Tb_dot_max =  1000*4;
 veh.delta_dot_min = -22.5*pi/180;
 veh.delta_dot_max =  22.5*pi/180;
 
