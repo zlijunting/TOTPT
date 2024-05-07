@@ -29,7 +29,7 @@ casadi_dir = 'B:\path\to\casadi-3.6.5';
    
 
 ## Folders
-* `racetrack-database`: racelines and track widths of race tracks, available on (https://github.com/TUMFTM/racetrack-database)
+* `racetrack-database`: racelines and track widths of race tracks, forked from (https://github.com/TUMFTM/racetrack-database)
 * `functions`: helper functions for track processing
 * `params`: track smoothing parameters and vehicle parameters
 * `tro`: offline time-optimal trajectory optimization framework
