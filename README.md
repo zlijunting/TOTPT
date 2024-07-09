@@ -2,14 +2,14 @@
 TOTPT solves time-optimal raceline using NLP with direct collocation approach, and performs NMPC path tracking within the racing scenario implemented in Simulink.
 
 ## Installation
-### Check Prerequisites
+### Prerequisites
 * Matlab and Simulink (tested on R2017a and R2022a on Win11)
 * Install [CasADi](https://web.casadi.org/get/)
 * Install [acados for Matlab](https://docs.acados.org/installation/index.html#windows-for-use-with-matlab)
 
 [Download TOTPT](https://github.com/zlijunting/TOTPT/archive/refs/heads/main.zip) and unzip at local directory
 
-### Check Dependencies
+### Dependencies
 * Run `totpt_env_variables.m` to add subfolders to Matlab search path
 * Open `acados_env_variables_windows.m` in `nmpc` folder, fill acados and casadi installation paths in the two lines
 ```
