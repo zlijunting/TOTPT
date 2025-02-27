@@ -37,6 +37,15 @@ casadi_dir = 'B:\path\to\casadi-3.6.5';
 
 # Citing
 ```
-Li, Jun-Ting, Chih-Keng Chen, and Hongbin Ren. 2024. "Time-Optimal Trajectory Planning and Tracking for Autonomous Vehicles" Sensors 24, no. 11: 3281. https://doi.org/10.3390/s24113281
+@article{li2024time,
+  title={Time-Optimal Trajectory Planning and Tracking for Autonomous Vehicles},
+  author={Li, Jun-Ting and Chen, Chih-Keng and Ren, Hongbin},
+  journal={Sensors},
+  volume={24},
+  number={11},
+  pages={3281},
+  year={2024},
+  publisher={MDPI}
+}
 ```
 
