@@ -35,7 +35,7 @@ casadi_dir = 'B:\path\to\casadi-3.6.5';
 * `tro`: offline time-optimal trajectory optimization framework
 * `nmpc`: online NMPC trajectory tracking framework
 
-# Citing
+## Citing
 ```
 @article{li2024time,
   title={Time-Optimal Trajectory Planning and Tracking for Autonomous Vehicles},
