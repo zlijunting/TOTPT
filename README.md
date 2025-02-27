@@ -35,4 +35,8 @@ casadi_dir = 'B:\path\to\casadi-3.6.5';
 * `tro`: offline time-optimal trajectory optimization framework
 * `nmpc`: online NMPC trajectory tracking framework
 
+# Citing
+```
+Li, Jun-Ting, Chih-Keng Chen, and Hongbin Ren. 2024. "Time-Optimal Trajectory Planning and Tracking for Autonomous Vehicles" Sensors 24, no. 11: 3281. https://doi.org/10.3390/s24113281
+```
 
